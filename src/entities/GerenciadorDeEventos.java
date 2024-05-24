@@ -1,3 +1,5 @@
+package entities;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,9 +10,8 @@ public class GerenciadorDeEventos {
         this.evento.add(evento);
     }
 
-    //método para listar os eventos salvos no arraylist
     public List<Evento> mostrarEvents(){
         return evento;
     }
-    //construtor para mostrar todos os eventos salvos no arraylist
+
 }

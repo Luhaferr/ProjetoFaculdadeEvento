@@ -1,14 +1,18 @@
-import java.time.LocalDateTime;
+package entities;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Evento {
 
     private String nome;
     private String endereco;
     private String categoria;
-    private String hora;
+    private Date hora;
     private String descricao;
 
-    public Evento(String nome, String endereco, String categoria, String hora, String descricao) {
+    SimpleDateFormat sfd = new SimpleDateFormat("dd/MM/yyyy");
+    public Evento(String nome, String endereco, String categoria, Date hora, String descricao) {
         this.nome = nome;
         this.endereco = endereco;
         this.categoria = categoria;
@@ -40,11 +44,11 @@ public class Evento {
         this.categoria = categoria;
     }
 
-    public String getHora() {
+    public Date getHora() {
         return hora;
     }
 
-    public void setHora(String hora) {
+    public void setHora(Date hora) {
         this.hora = hora;
     }
 
@@ -57,8 +61,8 @@ public class Evento {
     }
 
     public void status(){
-        System.out.println(nome + endereco + categoria + hora + descricao);
+        System.out.println(nome + endereco + categoria + sfd.format(hora) + descricao);
     }
 
-    //metodo marcar ou desmarcar
+
 }
